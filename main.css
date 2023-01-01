@@ -1,0 +1,187 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --color-primary-pale-blue: hsl(225, 100%, 94%);
+  --color-primary-bright-blue: hsl(245, 75%, 52%);
+  --color-neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --color-neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --color-neutral-dark-blue: hsl(223, 47%, 23%);
+  --font500: 500;
+  --font700: 700;
+  --font900: 900;
+  --font-size: 16px;
+  --font-family: "Red Hat Display", sans-serif;
+  --display-desktop: 1440px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 72px 25px;
+  background-color: var(--color-primary-pale-blue);
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: auto;
+  max-width: 325px;
+}
+.container img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px 30px 25px;
+  box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.05);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card h1 {
+  margin-top: 30px;
+  font-size: 135%;
+  font-weight: var(--font900);
+}
+.card p {
+  text-align: center;
+  color: var(--color-neutral-desaturated-blue);
+  margin-top: 15px;
+}
+.card .price {
+  background-color: var(--color-neutral-very-pale-blue);
+  display: flex;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+  align-items: center;
+  font-size: 90%;
+}
+.card .price .annual-plan {
+  margin-left: 15px;
+}
+.card .price .annual-plan .text {
+  font-weight: var(--font900);
+}
+.card .price .annual-plan .numbers {
+  color: var(--color-neutral-desaturated-blue);
+}
+.card .price a {
+  font-weight: var(--font700);
+}
+.card .cta {
+  background-color: var(--color-primary-bright-blue);
+  color: white;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-weight: var(--font700);
+  font-size: 93%;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 25px 15px 0px hsl(245deg, 75%, 94.5454545455%);
+  border: none;
+}
+.card .cancel-order {
+  margin-top: 25px;
+  color: var(--color-neutral-desaturated-blue);
+  font-weight: var(--font900);
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url(/images/pattern-background-desktop.svg);
+  }
+  .cta:hover,
+.cancel-order:hover {
+    cursor: pointer;
+  }
+  a:hover {
+    color: var(--color-neutral-desaturated-blue);
+  }
+  .cta:hover {
+    background-color: var(--color-neutral-desaturated-blue);
+  }
+  .cancel-order:hover {
+    color: black;
+  }
+}/*# sourceMappingURL=main.css.map */
